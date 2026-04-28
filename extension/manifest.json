@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Wordle Signal",
+  "version": "0.1.0",
+  "description": "Reads Wordle and Sedecordle boards and recommends the next guess.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Wordle Signal"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.nytimes.com/games/wordle/*",
+        "https://*.nytimes.com/games/wordle/*",
+        "https://wordleunlimited.org/*",
+        "https://www.wordleunlimited.org/*",
+        "https://www.sedecordle.com/*",
+        "https://sedecordle.com/*"
+      ],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["activeTab"],
+  "host_permissions": [
+    "https://www.nytimes.com/games/wordle/*",
+    "https://*.nytimes.com/games/wordle/*",
+    "https://wordleunlimited.org/*",
+    "https://www.wordleunlimited.org/*",
+    "https://www.sedecordle.com/*",
+    "https://sedecordle.com/*"
+  ]
+}

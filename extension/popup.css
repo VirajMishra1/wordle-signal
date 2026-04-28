@@ -1,0 +1,158 @@
+:root {
+  color-scheme: dark;
+  --bg: #101315;
+  --panel: #1b2024;
+  --line: #38434a;
+  --ink: #f3f0df;
+  --muted: #9aa8aa;
+  --cyan: #40d8e8;
+  --pink: #ff6aa8;
+  --yellow: #f3c94b;
+  --green: #43d17a;
+  --gray: #5e6970;
+  font-family: "Courier New", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 360px;
+  margin: 0;
+  background:
+    linear-gradient(rgba(255,255,255,.04) 50%, transparent 50%) 0 0 / 100% 4px,
+    var(--bg);
+  color: var(--ink);
+}
+
+main { padding: 14px; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.45rem;
+  line-height: 1;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 0 #000;
+}
+
+button {
+  min-height: 34px;
+  border: 2px solid var(--line);
+  background: var(--cyan);
+  color: #061113;
+  font: inherit;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 3px 3px 0 #000;
+}
+
+.status, .best, .boards, .rankings {
+  border: 2px solid var(--line);
+  background: var(--panel);
+  box-shadow: 4px 4px 0 #050607;
+  padding: 10px;
+  margin-bottom: 12px;
+}
+
+.status {
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.status.error { color: #ff9a9a; }
+
+.best {
+  border-color: var(--pink);
+  background: #161015;
+}
+
+.label {
+  display: block;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: .75rem;
+  margin-bottom: 4px;
+}
+
+#bestWord {
+  display: block;
+  color: var(--pink);
+  font-size: 2.35rem;
+  line-height: 1;
+}
+
+#bestMeta {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.boards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.board {
+  border: 1px solid var(--line);
+  padding: 5px;
+  min-height: 48px;
+}
+
+.board b {
+  display: block;
+  color: var(--cyan);
+  font-size: .7rem;
+  margin-bottom: 4px;
+}
+
+.mini-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+  margin-bottom: 2px;
+}
+
+.tile {
+  height: 10px;
+  background: var(--gray);
+}
+
+.tile.G { background: var(--green); }
+.tile.Y { background: var(--yellow); }
+.tile.B { background: var(--gray); }
+
+.rankings ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.rankings li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 5px;
+}
+
+.rankings .word {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.rankings .score {
+  color: var(--yellow);
+}
+
+.hidden { display: none; }

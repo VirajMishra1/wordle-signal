@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wordle Signal</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Wordle Signal</h1>
+      <button id="refresh" type="button">Scan</button>
+    </header>
+
+    <section id="status" class="status">Open Wordle or Sedecordle, then scan.</section>
+
+    <section id="best" class="best hidden">
+      <span class="label">Next Guess</span>
+      <strong id="bestWord">-----</strong>
+      <span id="bestMeta"></span>
+    </section>
+
+    <section id="boards" class="boards"></section>
+    <section id="rankings" class="rankings"></section>
+  </main>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>
