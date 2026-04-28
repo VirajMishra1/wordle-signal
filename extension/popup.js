@@ -80,7 +80,7 @@ function renderResult(pageState, result) {
 
   setStatus(`${modeLabel} read: ${historyCount} completed row${historyCount === 1 ? "" : "s"}.`);
   bestWordEl.textContent = best.word.toUpperCase();
-  bestMetaEl.textContent = `${countLabel}. Entropy ${best.score}. Worst bucket ${best.remainingIfWorst}.`;
+  bestMetaEl.textContent = `${countLabel} · worst case ${best.remainingIfWorst} left`;
   bestEl.classList.remove("hidden");
 
   renderBoards(pageState, result);

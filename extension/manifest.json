@@ -3,9 +3,19 @@
   "name": "Wordle Signal",
   "version": "0.1.0",
   "description": "Reads Wordle and Sedecordle boards and recommends the next guess.",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Wordle Signal"
+    "default_title": "Wordle Signal",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
   },
   "content_scripts": [
     {
