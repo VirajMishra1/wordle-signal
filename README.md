@@ -2,6 +2,8 @@
 
 Wordle Signal is a Chrome extension that reads your current Wordle-style board and recommends the next best guess. It works locally in the browser, so you do not need to manually click gray/yellow/green tiles or run a Python server.
 
+There is a video of the extension solving a board here: https://x.com/virajm1shra/status/2049239820233331010
+
 ## Supported Games
 
 - NYT Wordle
